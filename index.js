@@ -129,12 +129,14 @@ for (let i = 0; i < 10; i++) {
   let t = sentence();
   const docObj = bm.addDocument({ id: i, body: t });
   console.log(docObj);
-  sentencesArr.push(docObj);
+  // sentencesArr.push(docObj);
 }
 
-db.sentences.bulkPut(sentencesArr);
+// db.sentences.bulkPut(sentencesArr);
 
 bm.updateIdf();
+
+console.log(bm.documents);
 let result = bm.search('guru');
 // console.log(result);
 
